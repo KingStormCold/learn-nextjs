@@ -13,16 +13,11 @@ import '../styles/prism.css'
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
 
-export default function App({
-  Component,
-  pageProps,
-  emotionCache = clientSideEmotionCache,
-}: AppPropsWithLayout) {
-
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const Layout = Component.Layout ?? EmptyLayout
 
   return (
-    <CacheProvider value={emotionCache}>
+    <CacheProvider value={clientSideEmotionCache}>
       <ThemeProvider theme={theme}>
         {/* CssBaseline là style giữa các trình duyệt sẽ đồng nhất với nhau */}
         <CssBaseline />
