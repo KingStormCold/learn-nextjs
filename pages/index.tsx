@@ -2,11 +2,8 @@ import { Seo } from '@/components/common'
 import { FeatureWork, HeroSection, RecentPosts } from '@/components/home'
 import { MainLayout } from '@/components/layout'
 import { Box } from '@mui/material'
-import { Inter } from 'next/font/google'
 import { useRouter } from 'next/router'
 import { NextPageWithLayout } from '../models'
-
-const inter = Inter({ subsets: ['latin'] })
 
 const Home: NextPageWithLayout = () => {
   const router = useRouter()

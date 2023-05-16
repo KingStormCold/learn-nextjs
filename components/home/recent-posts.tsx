@@ -33,7 +33,7 @@ export function RecentPosts() {
           alignItems="center"
         >
           <Typography variant="h5">Recent Posts</Typography>
-          <Link passHref href="/blog" legacyBehavior>
+          <Link passHref href="/blog" >
             <MuiLink sx={{ display: { xs: 'none', md: 'inline-block' } }}>View all</MuiLink>
           </Link>
         </Stack>

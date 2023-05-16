@@ -19,7 +19,7 @@ export default function BlogListPage({ posts }: BlogListPageProps) {
         <Box component="ul" sx={{ listStyleType: 'none', p: 0 }}>
           {posts.map((post) => (
             <li key={post.id}>
-              <Link href={`/blog/${post.slug}`} legacyBehavior passHref>
+              <Link href={`/blog/${post.slug}`} passHref>
                 <a style={{ color: '#21243D', textDecoration : 'none'}}>
                   <PostItem post={post} />
                 </a>

@@ -34,7 +34,7 @@ export function HeroSection() {
               borderRadius: '50%',
             }}
           >
-            <Image src={avatar} layout="responsive" alt="avatar" style={{ borderRadius: '50%' }} />
+            <Image src={avatar} layout="responsive" alt="avatar" />
           </Box>
         </Stack>
       </Container>
