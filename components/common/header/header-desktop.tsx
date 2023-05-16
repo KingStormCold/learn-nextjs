@@ -15,7 +15,7 @@ export function HeaderDesktop(props: HeaderDesktopProps) {
         {/* Stack là theo kiểu display flex */}
         <Stack direction="row" justifyContent="flex-end">
           {ROUTE_LIST.map((route) => (
-            <Link key={route.path} href={route.path} passHref legacyBehavior>
+            <Link key={route.path} href={route.path} passHref>
               <MuiLink sx={{ ml: 2 }} className={clsx({ active: router.pathname === route.path })}>
                 {route.label}
               </MuiLink>
