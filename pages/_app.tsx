@@ -23,7 +23,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         <CssBaseline />
         <SWRConfig value={{ fetcher: (url) => axiosClient.get(url), shouldRetryOnError: false }}>
           <Layout>
-            <Component {...pageProps} />
+            <Component {...pageProps} >
+              
+            </Component>
           </Layout>
         </SWRConfig>
       </ThemeProvider>
