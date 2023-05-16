@@ -8,7 +8,7 @@ export interface LayoutProps {
 }
 
 export type NextPageWithLayout = NextPage & {
-    Layout?: (props: LayoutProps) => ReactElement
+    Layout?: (props: LayoutProps) => ReactNode
 }
 
 export type AppPropsWithLayout = AppProps & {
