@@ -4,11 +4,11 @@ import type { ReactElement, ReactNode } from 'react';
 import { EmotionCache } from '@emotion/react';
 
 export interface LayoutProps {
-    children: ReactNode
+    children: ReactElement
 }
 
 export type NextPageWithLayout = NextPage & {
-    Layout?: (props: LayoutProps) => ReactNode
+    Layout?: (props: LayoutProps) => ReactElement
 }
 
 export type AppPropsWithLayout = AppProps & {
