@@ -25,10 +25,10 @@ export function AdminLayout ({children}: LayoutProps) {
         <h1>Admin layout</h1>
         <p>Profile: {JSON.stringify(profile)}</p>
         <button onClick={handleLogoutClick}>Logout</button>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <a>Home</a>
         </Link>
-        <Link href="/about">
+        <Link href="/about" legacyBehavior>
           <a>About</a>
         </Link>
         <div>
