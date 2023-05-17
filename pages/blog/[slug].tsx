@@ -1,22 +1,21 @@
+import { Seo } from '@/components/common'
 import { MainLayout } from '@/components/layout'
 import { PostDetail } from '@/models'
 import { getPostList } from '@/utils/posts'
 import { Box, Container, Divider } from '@mui/material'
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
 import { useRouter } from 'next/router'
-import React from 'react'
-import {unified} from 'unified'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
+import Script from 'next/script'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeDocument from 'rehype-document'
 import rehypeFormat from 'rehype-format'
-import rehypeStringify from 'rehype-stringify'
-import {reporter} from 'vfile-reporter'
-import remarkToc from 'remark-toc'
 import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeStringify from 'rehype-stringify'
+import remarkParse from 'remark-parse'
 import remarkPrism from 'remark-prism'
-import Script from 'next/script'
+import remarkRehype from 'remark-rehype'
+import remarkToc from 'remark-toc'
+import { unified } from 'unified'
 
 export interface BlogDetailPageProps {
   post: PostDetail
@@ -28,6 +27,14 @@ export default function BlogDetailPage({ post }: BlogDetailPageProps) {
   if (!post) return null
   return (
     <Box>
+       <Seo
+        data={{
+          title: `${post.title} | Tuan Kul`,
+          description: post.description,
+          url: `${process.env.HOST_URL}/blog/${post.slug}`,
+          thumbnaiUrl: post.thumbnailUrl || '',
+        }}
+      />
       <Container>
         <h1> Post Detail Page</h1>
         <p>{post.title}</p>

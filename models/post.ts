@@ -11,6 +11,7 @@ export interface PostDetail {
     publishedDate: string
     tagList: string[]
     description: string
+    thumbnailUrl?: string
     slug: string
     author?: Author
     mdContent?: string
